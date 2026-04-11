@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Your Giga Pet</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>This is your Giga Pet</h1>
+      <p class="subtitle">
+        Take care of Rocky and keep him happy, healthy, and rested.
+      </p>
+    </header>
+
+    <main class="app-container">
+      <section class="pet-card">
+        <div class="left-panel">
+          <div class="pet-image-container">
+            <img class="pet-image" src="images/hound.jpg" alt="Rocky the Giga Pet">
+          </div>
+
+          <div class="pet-intro-card">
+            <h3 class="pet-title"></h3>
+            <p><strong>Type:</strong> Puppy</p>
+            <p><strong>Favorite Activity:</strong> Playing and walking</p>
+            <p><strong>Status:</strong> <span class="status-text"></span></p>
+          </div>
+        </div>
+
+        <section class="dashboard">
+          <h2>Pet Dashboard</h2>
+
+          <div class="stat">
+            Name: <strong><span class="name"></span></strong>
+          </div>
+
+          <div class="stat">
+            Weight: <strong><span class="weight"></span> pounds</strong>
+          </div>
+          <div class="bar-group">
+            <div class="bar-label">Weight</div>
+            <div class="bar-bg">
+              <div class="bar-fill weight-bar"></div>
+            </div>
+          </div>
+
+          <div class="stat">
+            Happiness:
+            <strong><span class="happiness"></span> / 10</strong>
+          </div>
+          <div class="bar-group">
+            <div class="bar-label">Happiness</div>
+            <div class="bar-bg">
+              <div class="bar-fill happiness-bar"></div>
+            </div>
+          </div>
+
+          <div class="stat">
+            Energy: <strong><span class="energy"></span> / 10</strong>
+          </div>
+          <div class="bar-group">
+            <div class="bar-label">Energy</div>
+            <div class="bar-bg">
+              <div class="bar-fill energy-bar"></div>
+            </div>
+          </div>
+
+          <div class="stat">
+            Mood: <strong><span class="mood"></span></strong>
+          </div>
+
+          <div class="button-container">
+            <button class="treat-button">Treat</button>
+            <button class="play-button">Play</button>
+            <button class="exercise-button">Exercise</button>
+            <button class="nap-button">Nap</button>
+            <button class="walk-button">Walk</button>
+            <button class="bath-button">Bath</button>
+            <button class="reset-button">Reset Pet</button>
+          </div>
+
+          <p class="pet-message"></p>
+
+          <div class="counter-card">
+            <h3>Action Counters</h3>
+            <p>Treats given: <strong><span class="treat-count"></span></strong></p>
+            <p>Times played: <strong><span class="play-count"></span></strong></p>
+            <p>Exercises done: <strong><span class="exercise-count"></span></strong></p>
+            <p>Naps taken: <strong><span class="nap-count"></span></strong></p>
+            <p>Walks taken: <strong><span class="walk-count"></span></strong></p>
+            <p>Baths taken: <strong><span class="bath-count"></span></strong></p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <audio id="pet-sound">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  </body>
+</html>
