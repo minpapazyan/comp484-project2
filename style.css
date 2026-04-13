@@ -189,7 +189,7 @@ button:disabled {
   border-radius: 10px;
   min-height: 50px;
   font-weight: bold;
-  transition: background 0.3s ease, border 0.3s ease;
+  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .message-normal {
@@ -232,6 +232,11 @@ button:disabled {
 
 .counter-card h3 {
   margin-top: 0;
+}
+
+/* message highlight for toggleClass() */
+.highlight {
+  box-shadow: 0 0 12px rgba(255, 200, 0, 0.9);
 }
 
 /* animations */
