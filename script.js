@@ -9,11 +9,6 @@ $(function () {
   $('.walk-button').click(clickedWalkButton);
   $('.bath-button').click(clickedBathButton);
   $('.reset-button').click(clickedResetButton);
-
-  // jQuery method #1:
-  // .attr() sets an attribute on the selected element.
-  // Here it adds a tooltip when the mouse hovers over the pet image.
-  $('.pet-image').attr('title', 'Your Giga Pet');
 });
 
 var pet_info;
@@ -264,18 +259,20 @@ function updateButtons() {
   $('.bath-button').prop('disabled', pet_info.energy <= 0);
   $('.nap-button').prop('disabled', pet_info.energy >= 10);
   $('.treat-button').prop('disabled', pet_info.weight >= 30);
-
-  // jQuery method #2:
-  // .prop() updates DOM properties on form elements.
-  // Here it is used to enable and disable buttons depending on the pet's stats.
 }
 
 function showMessage(message) {
-  $('.pet-message').stop(true, true).text(message);
+  $('.pet-message')
+    .stop(true, true)
+    .text(message)
+    .toggleClass('highlight');
 
-  // jQuery method #3:
-  // .fadeOut() and .fadeIn() animate the message so the update is more noticeable.
-  $('.pet-message').fadeOut(120).fadeIn(120);
+  $('.pet-message').slideToggle(100).slideToggle(100);
+
+  // jQuery method #1:
+  // .toggleClass() adds or removes the "highlight" class each time a new message appears.
+  // jQuery method #2:
+  // .slideToggle() creates a sliding animation so the message update is more noticeable.
 }
 
 function playSound() {
